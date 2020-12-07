@@ -1,19 +1,33 @@
 <mat-card class="example-card">
   <mat-card-header>
     <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+    <mat-card-title>Priečinok {{drive}}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
   <mat-card-content>
-    <p>
-      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-      bred for hunting.
-    </p>
+    <ul *ngIf="driveInfo">
+      <li>vyuzite miesto: {{driveInfo.usedSpace}} GB</li>
+      <li>freeSpace miesto: {{driveInfo.freeSpace}} GB</li>
+      <li>celkove miesto: {{driveInfo.totalSpace}} GB</li>
+    </ul>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions>
+
+  <app-graph></app-graph>
+
+<!--  <div class="chart-diplay">-->
+<!--    <div style="width: 100%">-->
+<!--      <canvas id="bar"></canvas>-->
+<!--    </div>-->
+
+<!--    <div style="width: 100%">-->
+<!--      <canvas id="bubble"></canvas>-->
+<!--    </div>-->
+
+<!--    <div style="width: 100%">-->
+<!--      <canvas id="doughnut"></canvas>-->
+<!--    </div>-->
+
+<!--    &lt;!&ndash; <div style="width: 100%">-->
+<!--      <canvas id="pie"></canvas>-->
+<!--    </div> &ndash;&gt;-->
+<!--  </div>-->
 </mat-card>

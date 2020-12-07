@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import { Chart } from 'chart.js';
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-graph',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GraphComponent implements OnInit {
 
-  constructor() { }
+  chart: any = [];
 
-  ngOnInit(): void {
+  constructor(private http: HttpClient) { }
+
+  ngOnInit() {
+
   }
 
 }

@@ -1,13 +1,24 @@
-<div>
+<h2 mat-dialog-title>Nastavenia</h2>
+<mat-dialog-content class="mat-typography">
   <form class="example-form">
     <mat-form-field class="example-full-width col-lg-12">
       <mat-label>Email</mat-label>
-      <input matInput placeholder="Ex. Pizza" value="Sushi">
+      <input matInput type="email" [(ngModel)]="email" name="email">
     </mat-form-field>
 
     <mat-form-field class="example-full-width col-lg-12">
       <mat-label>Periodicita obnovovania (sec)</mat-label>
-      <input matInput type="number" placeholder=""/>
+      <input matInput type="number" [(ngModel)]="driveCheckerRefresh" name="driveCheckerRefresh"/>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width col-lg-12">
+      <mat-label>Vyberte hladinu v percentach kedy sa posle email o stave zaplnenosti disku</mat-label>
+      <input matInput type="number" [(ngModel)]="percentageBelow" name="percentageBelow"/>
     </mat-form-field>
   </form>
-</div>
+
+  <button mat-raised-button color="primary" (click)="closeDialog()">Save</button>
+
+</mat-dialog-content>
+
+

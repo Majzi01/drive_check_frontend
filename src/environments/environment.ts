@@ -6,6 +6,14 @@ export const environment = {
   production: false
 };
 
+export const backendUrls = {
+  LOCAL_HOST: 'http://localhost:8080',
+  BASE_END_POINT: 'http://localhost:8080/api',
+  FILES: '/files',
+  DRIVES: '/drives',
+  PATH: '/path',
+  SETTINGS: '/settings',
+};
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
